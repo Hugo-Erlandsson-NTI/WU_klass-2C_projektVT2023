@@ -1,0 +1,31 @@
+/* mobile first */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#grid_wrapper {
+    display: grid;
+    background-image: url(/img/bakgrundsbild_slutprojekt.jpg);
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ;
+}
+
+header {
+    /* grid ska förändras när man scrollar i desktopläge */
+    display: grid;
+}
+
+
+
+/* ändrad css för desktop-layout */
+@media screen and (min-width: 700px) {
+    
+
+    /* annan header där titel är stor och över, ändra tillbaks till samma som mobile men kanske större när man scrollar ner */
+;
+}
