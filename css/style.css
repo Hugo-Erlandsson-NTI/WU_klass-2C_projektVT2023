@@ -6,53 +6,59 @@
     box-sizing: border-box;
 }
 
+body {
+    height: fit-content;
+}
+
 #grid_wrapper {
+    position: relative;
+    top: 5rem;
     min-height: 100vh;
     display: grid;
     background-image: url(/img/bakgrundsbild_slutprojekt.jpg);
 
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: 
     ""
-    "";
+    ""; */
 }
 
 header {
+    z-index: 1;
     background: yellow;
     width: 100vw;
-    height: 8rem;
-    /* position absolute i toppen */
-    position: absolute;
+    height: 10rem;
+
+    position: fixed;
+    top: 0;
     
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr;
     grid-template-areas: 
-    "h1"
-    "na";
-
-
-    
+    "h1" "na";   
 }
-/* @media-grej som förändrar grid och text i h1(till GCC) baserat på en javascriptlistener som lyssnar på scroll ner och upp, kanske uppdelat i flera steg*/
-/* OBS, tillfällig condition för mediagrej */
-@media screen and (max-width: 1000px){  
+/* @media-grej som förändrar grid och text i h1(till GCC) baserat på en javascriptlistener för scroll ner och upp, kanske uppdelat i flera steg*/
+/* OBS, tillfällig condition */
+/* @media screen and (max-width: 10000px){  
     header {
-        grid-template-columns: 1fr 5fr;
-        grid-template-rows: 1fr;
+        
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
         grid-template-areas: 
-        "h1" "na";
+        "h1"
+        "na"; 
     }
         
-}
+} */
 
 nav {
     grid-area: na;
 
     background: green;
-    display: flex;
-    align-items: space-evenly;
+    /* display: flex;
+    align-items: space-evenly; */
 
     /* @media-grej som förändras baserat på en javascriptlistener som lyssnar på scroll */
 }
@@ -61,12 +67,14 @@ h1 {
     grid-area: h1;
 }
 
+.main_heading_invisible {
+    display: none;
+}
+
 .nav_link {
     text-decoration: inherit;
     color: black;
 }
-
-
 
 /* ändrad css för desktop-layout */
 @media screen and (min-width: 1000px) {
@@ -75,5 +83,5 @@ h1 {
     }
 
     /* annan header där titel är stor och över, ändra tillbaks till samma som mobile men kanske större när man scrollar ner */
-;
+
 }
