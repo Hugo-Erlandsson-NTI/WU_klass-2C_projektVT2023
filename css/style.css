@@ -8,6 +8,7 @@
 
 body {
     height: fit-content;
+    width: 100%;
 }
 
 #grid_wrapper {
@@ -17,57 +18,63 @@ body {
     display: grid;
     background-image: url(/img/bakgrundsbild_slutprojekt.jpg);
 
-    /* grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: 
     ""
-    ""; */
+    "";
 }
 
 header {
     z-index: 1;
     background: yellow;
     width: 100vw;
-    height: 10rem;
+    height: 5rem;
 
     position: fixed;
     top: 0;
-    
+
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr;
     grid-template-areas: 
-    "h1" "na";   
+    "h1 na";   
 }
+
 /* @media-grej som förändrar grid och text i h1(till GCC) baserat på en javascriptlistener för scroll ner och upp, kanske uppdelat i flera steg*/
 /* OBS, tillfällig condition */
-/* @media screen and (max-width: 10000px){  
-    header {
+/* @media screen and (max-width: 10000px){ */
+    
         
-        grid-template-columns: 1fr;
-        grid-template-rows: 2fr 1fr;
-        grid-template-areas: 
-        "h1"
-        "na"; 
-    }
-        
-} */
+/*} */
 
 nav {
     grid-area: na;
 
+    height: 5rem;
+
     background: green;
-    /* display: flex;
-    align-items: space-evenly; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* space mellan länkar */
 
     /* @media-grej som förändras baserat på en javascriptlistener som lyssnar på scroll */
 }
 
 h1 {
     grid-area: h1;
+    font-size: 50px;
+    /* styla texten mer */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.main_heading_invisible {
+.main_heading_invisible {   /* toggla för att göra ena h1:an osynlig */
     display: none;
 }
 
@@ -79,7 +86,7 @@ h1 {
 /* ändrad css för desktop-layout */
 @media screen and (min-width: 1000px) {
     #grid_wrapper {
-        background: red
+        /* background: red */
     }
 
     /* annan header där titel är stor och över, ändra tillbaks till samma som mobile men kanske större när man scrollar ner */
