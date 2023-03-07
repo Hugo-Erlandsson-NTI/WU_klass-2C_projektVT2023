@@ -11,7 +11,7 @@
 
     <header> <!-- innehåller titel och nav, kanske grid i header för över och bredvid -->
 
-        <h1 id="mail_heading_short">GCC</h1>
+        <h1 id="main_heading_short">GCC</h1>
         <h1 id="main_heading_full" class="main_heading_invisible">Global Cycling Club</h1>
 
         <nav>
@@ -23,20 +23,28 @@
     </header>
 
     <div id="grid_wrapper">
-        <!--  -->
         
-        <main>
+        <main id="main_startsida"> <!-- main är det innehåll som är unikt för varje sida -->
 
-            <form id="search_bar"> 
-                <input type="search" id="query" name="q" placeholder="Search...">
-                <!-- <button>Search</button> -->
-                <!-- kanske ingen knapp, då kanske infogrej som visar info vid hover över, skulle eventuellt kunna göra att man faktiskt kan söka mellan sidor -->
+            <h2 id="welcome_text" class="mobile_item">Welcome!</h2>
+            <!-- kort beskrivning/block med nyheter? -->
+            <form id="search_bar" class="mobile_item"> 
+               <h3>Looking for something in particular?</h3>
+               <input type="search" id="query" name="q" placeholder="Search..."> <!--name används om någon javascript ska använda elementet-->
+               <!-- <button type="submit">Search</button> -->
+               <!-- kanske ingen knapp, då kanske infogrej som visar info vid hover över, skulle eventuellt kunna göra att man faktiskt kan söka mellan sidor -->
             </form>
+
+            <article id="startsida_nyheter1" class="mobile_item"></article>
+
+            <article id="startsida_nyheter2" class="mobile_item"></article>
+
+            
 
         </main>
 
         <footer>
-
+            <!-- kontaktinfo och sånt,  -->
         </footer>
      
     </div>

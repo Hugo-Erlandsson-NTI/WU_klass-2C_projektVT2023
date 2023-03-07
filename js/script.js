@@ -1,0 +1,1 @@
+// vid scroll toggla main_heading_invisible på main_heading_short och main_heading_full, och på något sätt ska det hänga ihop med @media-saker

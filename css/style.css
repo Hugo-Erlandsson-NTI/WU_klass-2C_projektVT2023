@@ -7,6 +7,7 @@
 }
 
 body {
+    min-height: 100vh;
     height: fit-content;
     width: 100%;
 }
@@ -16,17 +17,17 @@ body {
     top: 5rem;
     min-height: 100vh;
     display: grid;
-    background-image: url(/img/bakgrundsbild_slutprojekt.jpg);
+    background-image: url(/img/bakgrundsbild_slutprojekt.jpg);   /* på något sätt scala baserat på upplösning/storlek, bakgrudnsbild här innebär samma bild på alla sidor, kanske vill ändra det senare, main täcker inte hela sida i nuläget så blir lite konstigt */
 
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr 100px;
     grid-template-areas: 
-    ""
-    "";
+    "ma"
+    "fo";
 }
 
 header {
-    z-index: 1;
+    z-index: 1; /* kom ihåg att inte använda för mycket */
     background: yellow;
     width: 100vw;
     height: 5rem;
@@ -41,13 +42,6 @@ header {
     "h1 na";   
 }
 
-/* @media-grej som förändrar grid och text i h1(till GCC) baserat på en javascriptlistener för scroll ner och upp, kanske uppdelat i flera steg*/
-/* OBS, tillfällig condition */
-/* @media screen and (max-width: 10000px){ */
-    
-        
-/*} */
-
 nav {
     grid-area: na;
 
@@ -57,7 +51,7 @@ nav {
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 
     /* space mellan länkar */
 
@@ -66,8 +60,8 @@ nav {
 
 h1 {
     grid-area: h1;
-    font-size: 50px;
-    /* styla texten mer */
+    font-size: 4rem;
+    /* styla texten */
 
     display: flex;
     justify-content: center;
@@ -75,7 +69,7 @@ h1 {
 }
 
 .main_heading_invisible {   /* toggla för att göra ena h1:an osynlig */
-    display: none;
+    display: none;    /*alternativt flytta utanför skärmen ifall de inte tycker om att samsas om en gemensam plats*/
 }
 
 .nav_link {
@@ -83,10 +77,67 @@ h1 {
     color: black;
 }
 
-/* ändrad css för desktop-layout */
+main {
+    display: grid;
+    grid-area: ma;
+
+    /* kanske bakgrundsbild här men är för dennas parent, tror inte det går, gör istället direkt på grid wrapper, kanske olika id på olika sidor */
+
+}
+
+#main_startsida {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "we"
+    "se"
+    "a1"
+    "a2";
+}
+
+#welcome_text {
+    background-color: red;
+    grid-area: we;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search_bar {
+    grid-area: se;
+}
+
+#startsida_nyheter1 {
+    grid-area: a1;
+}
+
+#startsida_nyheter2 {
+    grid-area: a2;
+}
+
+.mobile_item {
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    grid-area: fo;
+    background-color: black;
+    /* innehåll kanske i flera kolumner i desktop och bara en på mobil */
+}
+
+
+/* @media-grej för desktoplayout, förändrar grid och text i h1(till GCC) baserat på en javascriptlistener för scroll ner och upp, kanske uppdelat i flera steg*/
+/* OBS, tillfällig condition */
 @media screen and (min-width: 1000px) {
     #grid_wrapper {
         /* background: red */
+        grid-template-columns: ;  /* flera kolumner, hur funkar detta om jag vill ha olika antal på olika sidor?*/
+        grid-template-areas: 
+        ""
+        ""
+        "";
+        /* ändra till att saker ligger i flera kolumner, alternativt ändra från flex till grid i main */
     }
 
     /* annan header där titel är stor och över, ändra tillbaks till samma som mobile men kanske större när man scrollar ner */
