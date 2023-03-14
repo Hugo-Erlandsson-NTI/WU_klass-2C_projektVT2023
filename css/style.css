@@ -12,15 +12,15 @@ body {
     width: 100%;
 }
 
-#grid_wrapper {
+#grid_wrapper {    /* bara separat från main för footer, kanske sätt ihop så att main är gridwrapper, då lättare med bakgrund också kanske, antingen footer i main eller footer utanför för hamnar i botten ändå */
     position: relative;
-    top: 5rem;
+    top: 7.6rem;
     min-height: 100vh;
     display: grid;
     background-image: url(/img/bakgrundsbild_slutprojekt.jpg);   /* på något sätt scala baserat på upplösning/storlek, bakgrudnsbild här innebär samma bild på alla sidor, kanske vill ändra det senare, main täcker inte hela sida i nuläget så blir lite konstigt */
 
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 100px;
+    grid-template-rows: 1fr 6rem;
     grid-template-areas: 
     "ma"
     "fo";
@@ -30,22 +30,24 @@ header {
     z-index: 1; /* kom ihåg att inte använda för mycket */
     background: yellow;
     width: 100vw;
-    height: 5rem;
+    height: 7rem;
 
-    position: fixed;
+    position: absolute;
     top: 0;
 
     display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: 
-    "h1 na";   
+    "h1" 
+    "na";   
 }
 
 nav {
+    
     grid-area: na;
 
-    height: 5rem;
+    height: 3rem;
 
     background: green;
 
@@ -65,27 +67,27 @@ h1 {
 
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .main_heading_invisible {   /* toggla för att göra ena h1:an osynlig */
     display: none;    /*alternativt flytta utanför skärmen ifall de inte tycker om att samsas om en gemensam plats*/
 }
 
-.nav_link {
+a { 
+    /* gör alla länkar till vanlig text som standard */
     text-decoration: inherit;
     color: black;
 }
 
 main {
-    display: grid;
     grid-area: ma;
 
-    /* kanske bakgrundsbild här men är för dennas parent, tror inte det går, gör istället direkt på grid wrapper, kanske olika id på olika sidor */
+    /*  bakgrundsbild  */
 
 }
 
-#main_startsida {
+#main_index {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
@@ -95,16 +97,18 @@ main {
     "a2";
 }
 
-#welcome_text {
+#welcome_text {  /* dåligt innehåll, antagligen ta bort */
     background-color: red;
     grid-area: we;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 }
 
 #search_bar {
     grid-area: se;
+    display: flex;
+    justify-content: center;
 }
 
 #startsida_nyheter1 {
@@ -115,10 +119,37 @@ main {
     grid-area: a2;
 }
 
-.mobile_item {
+.mobile_item {  /* varför? just nu inget syfte, ta bort om inte kommer på varför skapade */
     display: flex;
     align-items: center;
 }
+
+#main_group_rides {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.group_ride_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    font-size: smaller;
+    height: 15rem;
+    width:  13rem;
+
+    margin: 3rem;
+    padding: 1rem;
+
+    background-color: rgba(40, 144, 176, 0.85);
+    border-radius: 3.5rem;
+    box-shadow: 0px 0.1rem 0.5rem black;
+}
+
+/* .group_ride_card > * {     ser olagligt ut men gör det jag vill, kanske okej? löste med br i html istället för att lätt kontrollera var det är mellanrum
+    margin: 0.5rem;
+} */
 
 footer {
     grid-area: fo;

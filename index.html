@@ -11,28 +11,30 @@
 
     <header> <!-- innehåller titel och nav, kanske grid i header för över och bredvid -->
 
-        <h1 id="main_heading_short">GCC</h1>
-        <h1 id="main_heading_full" class="main_heading_invisible">Global Cycling Club</h1>
+        <a href="index.html">
+            <h1 id="main_heading_short">GCC</h1>
+            <h1 id="main_heading_full" class="main_heading_invisible">Global Cycling Club</h1>
+        </a>
 
         <nav>
-            <a href="" class="nav_link">History</a>
-            <a href="" class="nav_link">Group Rides Near You</a>
-            <a href="" class="nav_link">Upcoming Events</a>
+            <a href="our_history.html" class="nav_link">Our History</a>
+            <a href="group_rides.html" class="nav_link">Group Rides Near You</a>
+            <a href="events.html" class="nav_link">Upcoming Events</a>
         </nav>
 
     </header>
 
     <div id="grid_wrapper">
         
-        <main id="main_startsida"> <!-- main är det innehåll som är unikt för varje sida -->
+        <main id="main_index"> <!-- main är det innehåll som är unikt för varje sida -->
 
             <h2 id="welcome_text" class="mobile_item">Welcome!</h2>
             <!-- kort beskrivning/block med nyheter? -->
             <form id="search_bar" class="mobile_item"> 
                <h3>Looking for something in particular?</h3>
-               <input type="search" id="query" name="q" placeholder="Search..."> <!--name används om någon javascript ska använda elementet-->
+               <input type="search" id="query" name="q" placeholder="Search..."> <!--name används om någon javascript ska använda elementet vilket jag kanske ska göra för komplettering-->
                <!-- <button type="submit">Search</button> -->
-               <!-- kanske ingen knapp, då kanske infogrej som visar info vid hover över, skulle eventuellt kunna göra att man faktiskt kan söka mellan sidor -->
+               <!-- ingen knapp,  kanske infogrej som visar info vid hover över, skulle eventuellt kunna göra att man faktiskt kan söka mellan sidor -->
             </form>
 
             <article id="startsida_nyheter1" class="mobile_item"></article>
@@ -45,6 +47,8 @@
 
         <footer>
             <!-- kontaktinfo och sånt,  -->
+            <h4>Contact:</h4>
+            <ul></ul>
         </footer>
      
     </div>

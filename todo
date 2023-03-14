@@ -1,8 +1,11 @@
 startsida, sökfunktion?, kanske okej med fake så länge, kan göra att den visar de andra sidorna  som kompletteringsgrej
-vår historia, text, gråton bild på personer på högersidan, stycken med underrubriker och generös whitespace
-schema med aktiviteter, förmåga att byta mellan olika platser med snygg menu som highlightar det man är på(byter till andra sidor för att lättare, sen kanske byter bild/tabell med javascript) knappar för att boka något 
 
-karta med var det finns klubbar/aktiviteter, photoshop för röda pilar
+vår historia, text, gråton bild på personer(thispersondoesnotexist) på högersidan, stycken med underrubriker och generös whitespace
+kanske istället en sida med karta för både events och grouprides men då måste ha något annat och innehållet är inte viktigt
+
+lägg till bilder på städer och namn i grouprides
+
+karta med var det finns events, photoshop för röda pilar, javascriptidé kan vara att gör lite större och visar ruta med information vid hover över pil
 
 javascript som gör att header blir mindre(gör titel till initialer, nav till grej i mitten med rundade hörn) när man scrollar och sen större igen så fort man scrollar upp, kanske bara på desktop-layout
 
