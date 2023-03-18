@@ -17,7 +17,6 @@ body {
     top: 7.6rem;
     min-height: 100vh;
     display: grid;
-    background-image: url(/img/bakgrundsbild_slutprojekt.jpg);   /* på något sätt scala baserat på upplösning/storlek, bakgrudnsbild här innebär samma bild på alla sidor, kanske vill ändra det senare, main täcker inte hela sida i nuläget så blir lite konstigt */
 
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 6rem;
@@ -82,8 +81,11 @@ a {
 
 main {
     grid-area: ma;
+    background-color: aqua;  /* placeholder ifall background-image saknas eller inte funkar på någon av sidorna */
 
-    /*  bakgrundsbild  */
+    /*  bakgrundsbildstyling(olika bilder på varje sida men samma styling), på något sätt scala baserat på upplösning/storlek? */
+    background-size: cover;
+    background-position: center;
 
 }
 
@@ -95,6 +97,7 @@ main {
     "se"
     "a1"
     "a2";
+    background-image: url(/img/bakgrundsbild_slutprojekt.jpg);   
 }
 
 #welcome_text {  /* dåligt innehåll, antagligen ta bort */
@@ -145,6 +148,14 @@ main {
     background-color: rgba(40, 144, 176, 0.85);
     border-radius: 3.5rem;
     box-shadow: 0px 0.1rem 0.5rem black;
+}
+
+#main_events {
+    background-image: url(../misc/\(bild\ på\ race\)\ markus-spiske-WUehAgqO5hE-unsplash.jpg); /* tillfällig bild, ska vara downscalad och då ligga i img-mappen. ../ för att gå ut ur css-mapp och sen in i annan mapp. */
+}
+
+#main_group_rides {
+    background-image: url(../misc/\(bild\ för\ group\ ride\)\ martin-magnemyr-nGt71kRwUOw-unsplash.jpg); /* tillfällig bild, ska vara downscalad och då ligga i img-mappen. ../ för att gå ut ur css-mapp och sen in i annan mapp. */
 }
 
 /* .group_ride_card > * {     ser olagligt ut men gör det jag vill, kanske okej? löste med br i html istället för att lätt kontrollera var det är mellanrum

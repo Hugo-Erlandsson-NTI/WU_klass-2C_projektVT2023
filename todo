@@ -1,14 +1,29 @@
-startsida, sökfunktion?, kanske okej med fake så länge, kan göra att den visar de andra sidorna  som kompletteringsgrej
 
 vår historia, text, gråton bild på personer(thispersondoesnotexist) på högersidan, stycken med underrubriker och generös whitespace
-kanske istället en sida med karta för både events och grouprides men då måste ha något annat och innehållet är inte viktigt
+kanske istället en sida med karta för både events och grouprides men då måste ha något annat och innehållet i sig är inte så viktigt
 
-lägg till bilder på städer och namn i grouprides
+lägg till bilder(downscalade) på städer och namn i grouprides
 
-karta med var det finns events, photoshop för röda pilar, javascriptidé kan vara att gör lite större och visar ruta med information vid hover över pil
+karta med var det finns events, photoshop för röda pilar, kom ihåg psd-fil
 
 javascript som gör att header blir mindre(gör titel till initialer, nav till grej i mitten med rundade hörn) när man scrollar och sen större igen så fort man scrollar upp, kanske bara på desktop-layout
 
-logga kan vara cykel med jordglober som hjul, svårt att göra bra photoshop, om jag inte gör det måste jag ha photoshop på någon annan bild, kom ihåg psd-fil
+kanske en "home" i nav som länkar till index istället för att huvudtitel gör det, eller både och? det känns inte bra med flera knappar som gör samma sak men det är inte någon extra knapp så kanske ändå bra
 
-andra titlar(fliknamn) för subpages
+krav:
+fyra sidor
+ps-bild
+annan layout för desktop
+skärminspelning
+testning
+utvärdering
+
+
+
+
+extragrejer/eventuell komplettering:
+ikon i flikar
+fungerande sökfunktion
+fin logga
+logga cykel med jordglober som hjul,
+visa information för karta vid hover över pins
