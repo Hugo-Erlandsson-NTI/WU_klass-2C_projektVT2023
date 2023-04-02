@@ -9,7 +9,7 @@
 body {
     min-height: 100vh;
     height: fit-content;
-    width: 100%;
+    /* width: 100%; */
 }
 
 #grid_wrapper {    /* bara separat från main för footer, kanske sätt ihop så att main är gridwrapper, då lättare med bakgrund också kanske, antingen footer i main eller footer utanför för hamnar i botten ändå */
@@ -28,7 +28,7 @@ body {
 header {
     z-index: 1; /* kom ihåg att inte använda för mycket */
     background: yellow;
-    width: 100vw;
+    width: 100%;
     height: 7rem;
 
     position: absolute;
@@ -86,7 +86,6 @@ main {
     /*  bakgrundsbildstyling(olika bilder på varje sida men samma styling), på något sätt scala baserat på upplösning/storlek? */
     background-size: cover;
     background-position: center;
-
 }
 
 #main_index {
@@ -122,7 +121,7 @@ main {
     grid-area: a2;
 }
 
-.mobile_item {  /* varför? just nu inget syfte, ta bort om inte kommer på varför skapade */
+.mobile_item {  /* skapade för att toggla när skiftar till desktop och innehåller alltså styling som elementen bara ska ha i mobilläge, denna borde ligga i media query och vara för desktop-layout */
     display: flex;
     align-items: center;
 }
@@ -145,26 +144,62 @@ main {
     margin: 3rem;
     padding: 1rem;
 
-    background-color: rgba(40, 144, 176, 0.85);
+    background-color: rgba(255, 255, 255, 0.85);
     border-radius: 3.5rem;
     box-shadow: 0px 0.1rem 0.5rem black;
 }
 
 #main_events {
-    background-image: url(../misc/\(bild\ på\ race\)\ markus-spiske-WUehAgqO5hE-unsplash.jpg); /* tillfällig bild, ska vara downscalad och då ligga i img-mappen. ../ för att gå ut ur css-mapp och sen in i annan mapp. */
+    /* width: 100vw; */
+
+    /* grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "sec img"
+    "map map"; */
+    background-image: url(../misc/\(bild\ på\ race\)\ markus-spiske-WUehAgqO5hE-unsplash.jpg); /* tillfällig bild, ska vara något mer neutralt landskap och också downscalad till 200 kb och ligga i img-mappen. "../" för att gå ut ur css-mapp och sen in i annan mapp.*/
 }
+
+/* #events_section {
+    grid-area: sec;
+}
+
+#events_image {
+    grid-area: img;
+    width: 100%;
+}
+
+#events_map {
+    grid-area: map;
+} */
 
 #main_group_rides {
     background-image: url(../misc/\(bild\ för\ group\ ride\)\ martin-magnemyr-nGt71kRwUOw-unsplash.jpg); /* tillfällig bild, ska vara downscalad och då ligga i img-mappen. ../ för att gå ut ur css-mapp och sen in i annan mapp. */
 }
 
-/* .group_ride_card > * {     ser olagligt ut men gör det jag vill, kanske okej? löste med br i html istället för att lätt kontrollera var det är mellanrum
+/* .group_ride_card > * {     ser olagligt ut men gör det jag vill, kanske okej? löste med <br> i html istället för att lätt kontrollera var det är mellanrum
     margin: 0.5rem;
 } */
 
+.format1_article {      /* format för article som innehåller en section med text och en bild som är till höger om texten. kanske dåligt namn. */
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+}
+
+.format1_section {
+    display: flex;
+    flex-direction: column;
+}
+
+.format1_img {
+    
+}
+
+
 footer {
     grid-area: fo;
-    background-color: black;
+    background-color: aqua;
     /* innehåll kanske i flera kolumner i desktop och bara en på mobil */
 }
 
